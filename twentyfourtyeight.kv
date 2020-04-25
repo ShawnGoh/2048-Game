@@ -1,0 +1,106 @@
+
+<Label>:
+    color: 1,1,1,1
+    bold:True
+    canvas.before:
+
+        Color:
+            rgba: 0,0,0,1
+        RoundedRectangle:
+            pos:self.pos
+            size: self.size
+            radius:[15, 15, 15, 15]  
+
+<MainGame>: 
+    hiscore:hiscore
+    score: score
+    time: time
+    boardobject:boardobject
+    reset_btn: reset_btn
+    bgcolor: 1, 1, 1, 0.85
+    canvas:
+        Color:
+            rgba: self.bgcolor
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        text:'2048'
+        bold:True
+        text_size: self.size
+        font_size:57.5
+        size: ((root.height*0.65))-10,(((root.height*0.65)/4)-20)*0.85
+        pos: ((root.width-root.height*0.65)/2)+5,(root.height*0.77+(((root.height*0.65)/4)-20)*0.6)+10
+        color: 0,0,0,1
+        halign: 'center'
+        valign: 'middle'
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 0.85
+            RoundedRectangle:
+                pos:((root.width-root.height*0.65)/2)+5 + self.width*0.01, (root.height*0.77+(((root.height*0.65)/4)-20)*0.6)+10+self.height*0.05
+                size: self.width*0.98,self.height*0.9
+                radius:[15, 15, 15, 15]
+        
+    Label:
+        id:time
+        size: ((root.height*0.65)/4)-10,(((root.height*0.65)/4)-20)*0.6
+        text: 'Time'
+        halign: 'center'
+        valign: 'middle'
+        color: 1,1,1,1
+        pos: ((root.width-root.height*0.65)/2)+5,root.height*0.77
+    Label:
+        id:score
+        size: ((root.height*0.65)/4)-10,(((root.height*0.65)/4)-20)*0.6
+        text: 'Score'
+        halign: 'center'
+        valign: 'middle'
+        color: 1,1,1,1
+        pos: ((root.width-root.height*0.65)/2)+2*(root.height*0.65/4)+5,root.height*0.77
+
+    Label:
+        id:hiscore
+        size: ((root.height*0.65)/4)-10,(((root.height*0.65)/4)-20)*0.6
+        text: 'hiScore'
+        text_size: self.size
+        halign: 'center'
+        valign: 'middle'
+
+        color: 1,1,1,1
+        pos: ((root.width-root.height*0.65)/2)+1*(root.height*0.65/4)+5,root.height*0.77
+
+    smoothButton:
+        id:reset_btn
+        size: ((root.height*0.65)/4)-10,(((root.height*0.65)/4)-20)*0.6
+        text: 'Reset'
+        halign: 'center'
+        valign: 'middle'
+        color: 1,1,1,1
+        pos: ((root.width-root.height*0.65)/2)+3*(root.height*0.65/4)+5,root.height*0.77
+        on_press: root.reset()
+
+        back_color: (255/255, 99/255, 71/255, 1)
+
+    
+    GridLayout:
+        id: boardobject
+        size: root.height*0.65,root.height*0.65
+        pos: (root.width-root.height*0.65)/2,root.height*0.07
+        spacing: 5
+        cols: 4
+
+
+
+<smoothButton@Button>:
+    background_color:(0,0,0,0)
+    background_normal:''
+    back_color:(255/255, 99/255, 71/255, 1)
+    border_radius:[15, 15, 15, 15] 
+    canvas.before:
+        Color:
+            rgba:self.back_color
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius: self.border_radius
