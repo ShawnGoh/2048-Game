@@ -1,15 +1,11 @@
 
 # **My Game: TwentyFourtyEight - 2048**
-@(2048)[SUTD|10.009|The Digital World]
+[SUTD | 10.009 | The Digital World ]
 
 This project is a remake of the classic game designed by the Italian web developer Gabriele Cirulli **[2048](https://2048game.com/)** using python and kivy to create an interactive GUI that tracks time taken, highscores (reset on closure of the application window) and allows for infinite replays. This project was done in the month of April in the year 2020 for the purposes of the module: SUTD 2010 FRESHMORE - 10.009 : The Digital World 
 
 ----------
 
-[TOC]
-
-
-----------
 ## Built With
 - Python 3
 - Kivy 2.0.0cr2
