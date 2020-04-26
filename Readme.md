@@ -12,7 +12,7 @@ This project is a remake of the classic game designed by the Italian web develop
 
 ----------
 ## GamePlay
-Here is a link to a video of the gameplay : Video
+Here is a link to a video of the gameplay : [Video](https://youtu.be/0PHvs4lBT_I)
 
 On running the app, user will be greeted with the below GUI. 
  
