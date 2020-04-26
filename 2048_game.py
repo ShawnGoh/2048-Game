@@ -4,7 +4,6 @@ from kivy.clock import Clock
 from kivy.graphics import Rectangle
 from kivy.graphics import RoundedRectangle
 from kivy.uix.popup import Popup
-from kivy.core.audio import SoundLoader
 from kivy.uix.button import Button
 from kivy.uix.button import Label
 from kivy.uix.widget import Widget
@@ -46,12 +45,6 @@ class MainGame(Widget):
         self.hiscoreboard=0
         self.score.text ='Score' +'\n'+str(self.scoreboard)
         self.hiscore.text = 'High Score' +'\n'+str(self.hiscoreboard)
-
-        #To start background song when the game is opened
-        self.sound = SoundLoader.load('music.mp3')
-        self.sound.volume = 0.03
-        self.sound.loop = True
-        self.sound.play()
 
     #Method to refresh the time text shown
     def update(self, *args):
